@@ -9,6 +9,7 @@ export const siteTitle = "Exemplo de site Next.js";
 export default function Layout({ children, home }) {
   return (
     <div className={styles.container}>
+
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -24,6 +25,7 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+
       <header className={styles.header}>
         {home ? (
           <>
@@ -53,14 +55,17 @@ export default function Layout({ children, home }) {
           </>
         )}
       </header>
+
       <main>{children}</main>
+
       {!home && (
         <div className={styles.backToHome}>
           <Link href="/">
-            <a>← Back to home</a>
+            <a>← Voltar para a Home</a>
           </Link>
         </div>
       )}
+
     </div>
   );
 }
